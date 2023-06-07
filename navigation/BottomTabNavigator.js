@@ -8,6 +8,7 @@ import { useColorScheme } from "react-native";
 import Colors from "../constants/Colors";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
+import WAWGTDTQ from "../screens/WAWGTDTQ";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -20,25 +21,25 @@ export default function BottomTabNavigator() {
       screenOptions={{ tabBarActiveTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
-        name="TabOne"
+        name="Experiences"
         component={TabOneNavigator}
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="globe" color={color} />
           ),
         }}
       />
-      <BottomTab.Screen
-        name="TabTwo"
+      {/* <BottomTab.Screen
+        name="Bucket List"
         component={TabTwoNavigator}
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="list" color={color} />
           ),
         }}
-      />
+      /> */}
     </BottomTab.Navigator>
   );
 }
@@ -59,7 +60,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: "Tab One Title" }}
+        options={{ headerTitle: "Welcome to OneLife" }}
       />
     </TabOneStack.Navigator>
   );
@@ -73,8 +74,21 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+        options={{ headerTitle: "Bucket List" }}
       />
     </TabTwoStack.Navigator>
   );
+}
+
+const QStack = createStackNavigator();
+
+function QNavigator() {
+  return (
+    <QStack.Navigator>
+      <QStack.Screen
+      name = "WAWGTDTQ"
+      component={WAWGTDTQ}
+      />
+    </QStack.Navigator>
+  )
 }

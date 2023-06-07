@@ -21,7 +21,22 @@ export default {
               TabTwoScreen: "two",
             },
           },
+          WAWGTDTQ: {
+            screens: {
+              QScreen: "Q"
+            }
+          }
         },
+      },
+      SignIn: {
+        screens: {
+          SignInScreen: "three"
+        }
+      },
+      SignUp: {
+        screens: {
+          SignUpScreen: "four"
+        }
       },
       NotFound: "*",
     },

@@ -154,10 +154,6 @@ export default function TabOneScreen() {
 
     }
 
-
-
-    
-
     // function handlePress(id) {
     //   // Make a POST request to the backend API to save the experience to the user's account
     //   axios.post('https://onelifemobile.onrender.com/api/users/saved', {
@@ -238,12 +234,12 @@ export default function TabOneScreen() {
               </View>
             </View>
           </TouchableOpacity>
-          <View style = {styles.pictureButtonView}>
+          {/* <View style = {styles.pictureButtonView}>
               <TouchableOpacity style = {styles.pictureButton}>
                 <Text style = {styles.pictureText}>Capture with OneLife </Text>
                 <Ionicons name="camera-outline" size={15} color="white" />
               </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
     );
 
@@ -271,7 +267,7 @@ export default function TabOneScreen() {
                     experience={experience}
                     handleURL={handleURL}
                     />
-                    <Selector/>
+                    {/* <Selector/> */}
                   </View>
                 ))} 
                 </ScrollView>
@@ -371,7 +367,8 @@ const styles = StyleSheet.create({
     },
   card: {
       width: 280,
-      height: 380,
+      // height: 380,
+      height: 300,
       borderRadius: 30,
       backgroundColor: "#FFFFFF",
       marginLeft: 10,
@@ -388,8 +385,9 @@ const styles = StyleSheet.create({
       // marginTop: "37.5%",
       backgroundColor: "#FFFFFF",
       alignItems: "flex-start",
-      position: "absolute",
-      top: 0,
+      // position: "absolute",
+      top: -27.5,
+      // bottom: 0,
     },
     cardText: {
       flexDirection: "column",
@@ -399,9 +397,12 @@ const styles = StyleSheet.create({
       // marginTop: 5,
       // width: 275,
       // borderRadius: 40,
-      // backgroundColor: "red",
+      backgroundColor: "#FFFFFF",
       width: "100%",
-      height: 160,
+      // height: 160,
+      // height: "100%",
+      borderBottomRightRadius: 30,
+      borderBottomLeftRadius: 30,
     },
     cardTextTitle: {
       alignItems: "flex-start",
@@ -411,14 +412,15 @@ const styles = StyleSheet.create({
       fontSize: 14,
     },
     cardTextLocationView: {
-      height: "15%",
+      height: "20%",
       alignItems: "flex-end",
       marginRight: 10,
       // come back to this there's a weird bug with a corner edge on the card
       backgroundColor: "#FFFFFF",
       width: "100%",
       position: "absolute", 
-      top: 0 + "25%",
+      top: 0 + "30%", //change this back to 25 when this is pushed to prod
+      // bottom: 0,
     },
     cardTextLocationText: {
       fontWeight: "500",

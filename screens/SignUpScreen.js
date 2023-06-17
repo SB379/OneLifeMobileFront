@@ -72,7 +72,7 @@ export default function SignUpScreen() {
                 <TextInput placeholder="Last Name" placeholderTextColor = {"#000000"} style = {styles.input} value = {last} onChangeText = {setLast}/>
                 <TextInput placeholder="Email" placeholderTextColor={"#000000"} style = {styles.input} value = {email} onChangeText = {setEmail} autoCapitalize = {'none'}/>
                 <TextInput placeholder="Password" placeholderTextColor={"#000000"} style = {styles.input} value = {password} onChangeText = {setPassword} autoCapitalize = {'none'} secureTextEntry/>
-                <TextInput placeholder="Confirm Password" placeholderTextColor={"#000000"} style = {styles.input} value = {confirm} onChangeText = {setConfirm} autoCapitalize = {'none'}/>
+                <TextInput placeholder="Confirm Password" placeholderTextColor={"#000000"} style = {styles.input} value = {confirm} onChangeText = {setConfirm} autoCapitalize = {'none'} secureTextEntry/>
 
                 <TouchableOpacity style = {styles.button} onPress = {handleSubmit}>
                         <Text style = {styles.buttonText}>Sign Up</Text>
